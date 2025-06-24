@@ -4,17 +4,23 @@ A CLI tool for scaffolding end-to-end type-safe TypeScript projects with best pr
 
 ## Quick Start
 
+If you install globally, you can run the CLI directly:
+
+```sh
+tvi
+```
+
 Run without installing globally:
 
-```bash
+```sh
 # Using npm
 npx tvi-cli@latest
 
 # Using bun
-bun create tvi@latest
+bunx tvi-cli@latest
 
 # Using pnpm
-pnpm create tvi@latest
+pnpx tvi-cli@latest
 ```
 
 Follow the prompts to configure your project or use the `--yes` flag for defaults.
@@ -39,7 +45,7 @@ Follow the prompts to configure your project or use the `--yes` flag for default
 
 ## Usage
 
-```bash
+```sh
 Usage: tvi [project-directory] [options]
 
 Options:
@@ -68,49 +74,49 @@ Options:
 
 Create a project with default configuration:
 
-```bash
+```sh
 npx tvi-cli my-app --yes
 ```
 
 Create a project with specific options:
 
-```bash
+```sh
 npx tvi-cli my-app --database postgres --orm drizzle --auth --addons pwa biome
 ```
 
 Create a project with Elysia backend and Node.js runtime:
 
-```bash
+```sh
 npx tvi-cli my-app --backend elysia --runtime node
 ```
 
 Create a project with multiple frontend options:
 
-```bash
+```sh
 npx tvi-cli my-app --frontend tanstack-router native
 ```
 
 Create a project with examples:
 
-```bash
+```sh
 npx tvi-cli my-app --examples todo ai
 ```
 
 Create a project with Turso database setup:
 
-```bash
+```sh
 npx tvi-cli my-app --database sqlite --orm drizzle --db-setup turso
 ```
 
 Create a project with Convex backend:
 
-```bash
+```sh
 npx tvi-cli my-app --backend convex --frontend tanstack-router
 ```
 
 Create a project with documentation site:
 
-```bash
+```sh
 npx tvi-cli my-app --addons starlight
 ```
 

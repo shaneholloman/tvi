@@ -15,7 +15,8 @@
       "WebFetch(domain:www.npmjs.com)",
       "Bash(npx @shaneholloman/tvi:*)",
       "Bash(bun pm info:*)",
-      "Bash(rg:*)"
+      "Bash(rg:*)",
+      "Bash(npm unpublish:*)"
     ],
     "deny": []
   }
