@@ -1,0 +1,33 @@
+{{#if (includes addons "pwa")}}
+import { VitePWA } from "vite-plugin-pwa";
+{{/if}}
+import { reactRouter } from "@react-router/dev/vite";
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+    reactRouter(),
+    tsconfigPaths(),
+    {{#if (includes addons "pwa")}}
+    VitePWA({
+      registerType: "autoUpdate",
+      manifest: {
+        name: "{{projectName}}",
+        short_name: "{{projectName}}",
+        description: "{{projectName}} - PWA Application",
+        theme_color: "#0c0c0c",
+      },
+      pwaAssets: {
+        disabled: false,
+        config: true,
+      },
+      devOptions: {
+        enabled: true,
+      },
+    }),
+    {{/if}}
+  ],
+});

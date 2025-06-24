@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(bun run:*)",
+      "Bash(diff:*)",
+      "Bash(cp:*)",
+      "Bash(npm whoami:*)",
+      "Bash(npm login)",
+      "Bash(bun view:*)",
+      "Bash(bun pm view:*)",
+      "Bash(npx tvi-cli:*)",
+      "WebFetch(domain:www.npmjs.com)",
+      "Bash(npx @shaneholloman/tvi:*)",
+      "Bash(bun pm info:*)",
+      "Bash(rg:*)"
+    ],
+    "deny": []
+  }
+}
